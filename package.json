@@ -1,14 +1,16 @@
 {
-  "name": "@anyshare/i18nfactory",
+  "name": "@aishu/i18nfactory",
   "version": "1.0.0",
   "description": "i18nFactory",
   "main": "dist/i18n.cjs.js",
   "module": "dist/i18n.es.js",
   "types": "dist/types/index.d.ts",
-  "author": "wang.lianyan <wang.lianyan@aishu.cn>",
-  "license": "MIT",
+  "author": "aishu",
+  "license": "Apache-2.0",
   "files": [
     "dist/",
+    "LICENSE",
+    "NOTICE",
     "README.md"
   ],
   "devDependencies": {

@@ -3,7 +3,7 @@
 ## 安装
 
 ```
-npm install @anyshare/i18nfactory --registry=http://repository.aishu.cn:8081/repository/npm-all/
+npm install @aishu/i18nfactory
 ```
 
 ## 使用
@@ -11,7 +11,7 @@ npm install @anyshare/i18nfactory --registry=http://repository.aishu.cn:8081/rep
 1. 初始化，导出i18n实例
 ```js
 // i18n.js
-import i18nFactory from '@anyshare/i18nfactory'
+import i18nFactory from '@aishu/i18nfactory'
 
 // translations：支持的语言
 // locale：默认当前的语言

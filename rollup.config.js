@@ -12,71 +12,71 @@ const banner = `
   /**
    * @license
    * author: ${author}
-   * ${moduleName}.js v${pkg.version}
+   * ${moduleName} v${pkg.version}
    * Released under the ${pkg.license} license.
    */
 `;
 
 export default [
-  // ES
-  {
-    input: inputFileName,
-    output: [
-      {
-        file: pkg.module,
-        format: "es",
-        sourcemap: "inline",
-        banner,
-        exports: "named",
-        plugins: [terser()],
-      },
-    ],
-    external: [
-      ...Object.keys(pkg.dependencies || {}),
-      ...Object.keys(pkg.devDependencies || {}),
-    ],
-    plugins: [
-      pluginCommonjs({
-        extensions: [".js", ".ts"],
-      }),
-      babel({
-        babelHelpers: "bundled",
-        configFile: path.resolve(__dirname, ".babelrc.js"),
-      }),
-      pluginNodeResolve({
-        browser: false,
-      }),
-    ],
-  },
+	// ES
+	{
+		input: inputFileName,
+		output: [
+			{
+				file: pkg.module,
+				format: "es",
+				sourcemap: "inline",
+				banner,
+				exports: "named",
+				plugins: [terser()],
+			},
+		],
+		external: [
+			...Object.keys(pkg.dependencies || {}),
+			...Object.keys(pkg.devDependencies || {}),
+		],
+		plugins: [
+			pluginCommonjs({
+				extensions: [".js", ".ts"],
+			}),
+			babel({
+				babelHelpers: "bundled",
+				configFile: path.resolve(__dirname, ".babelrc.js"),
+			}),
+			pluginNodeResolve({
+				browser: false,
+			}),
+		],
+	},
 
-  // CommonJS
-  {
-    input: inputFileName,
-    output: [
-      {
-        file: pkg.main,
-        format: "cjs",
-        sourcemap: "inline",
-        banner,
-        exports: "named",
-        plugins: [terser()],
-      },
-    ],
-    external: [
-      ...Object.keys(pkg.dependencies || {}),
-      ...Object.keys(pkg.devDependencies || {}),
-    ],
-    plugins: [
-      pluginCommonjs({
-        extensions: [".js", ".ts"],
-      }),
-      babel({
-        babelHelpers: "bundled",
-        configFile: path.resolve(__dirname, ".babelrc.js"),
-      }),
-      pluginNodeResolve({
-        browser: false,
-      }),
-    ],
-  },
+	// CommonJS
+	{
+		input: inputFileName,
+		output: [
+			{
+				file: pkg.main,
+				format: "cjs",
+				sourcemap: "inline",
+				banner,
+				exports: "named",
+				plugins: [terser()],
+			},
+		],
+		external: [
+			...Object.keys(pkg.dependencies || {}),
+			...Object.keys(pkg.devDependencies || {}),
+		],
+		plugins: [
+			pluginCommonjs({
+				extensions: [".js", ".ts"],
+			}),
+			babel({
+				babelHelpers: "bundled",
+				configFile: path.resolve(__dirname, ".babelrc.js"),
+			}),
+			pluginNodeResolve({
+				browser: false,
+			}),
+		],
+	},
 ];
