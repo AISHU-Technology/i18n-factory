@@ -1,6 +1,6 @@
 /**
    * @license
-   * author: aishu
+   * author: mao.zhengyang <mao.zhengyang@aishu.cn>
    * i18nfactory v1.0.0
    * Released under the Apache-2.0 license.
    */

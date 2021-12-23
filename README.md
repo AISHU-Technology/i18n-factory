@@ -1,12 +1,12 @@
-# i18n工厂函数
+# i18n Factory
 
-## 安装
+## Install
 
 ```
 npm install @aishu/i18nfactory
 ```
 
-## 使用
+## Usage
 
 1. 初始化，导出i18n实例
 ```js

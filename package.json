@@ -5,13 +5,28 @@
   "main": "dist/i18n.cjs.js",
   "module": "dist/i18n.es.js",
   "types": "dist/types/index.d.ts",
-  "author": "aishu",
+  "author": "mao.zhengyang <mao.zhengyang@aishu.cn>",
   "license": "Apache-2.0",
   "files": [
     "dist/",
     "LICENSE",
     "NOTICE",
     "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "i18n",
+    "locale",
+    "translation",
+    "localization",
+    "globalizatin"
+  ],
+  "contributors": [
+    "gu.haixia <gu.haixia@aishu.cn>",
+    "wang.lianyan <wang.lianyan@aishu.cn>"
   ],
   "devDependencies": {
     "@babel/core": "^7.12.10",
