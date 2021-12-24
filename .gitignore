@@ -1,6 +1,6 @@
-  
 .DS_Store
 node_modules/
 dist-transpiled/
+dist/
 package-lock.json
 yarn-error.log
